@@ -1,21 +1,19 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
+import { useState } from "react";
+import { Header, FullscreenMenu } from "@/components/Header";
+import { HeroSlider } from "@/components/HeroSlider";
 import { About } from "@/components/About";
-import { Portfolio } from "@/components/Portfolio";
-import { Services } from "@/components/Services";
-import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Hero />
+    <main className="min-h-screen bg-background text-foreground">
+      <Header onMenuOpen={() => setIsMenuOpen(true)} />
+      <FullscreenMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <HeroSlider />
       <About />
-      <Portfolio />
-      <Services />
-      <Testimonials />
       <Contact />
       <Footer />
     </main>
