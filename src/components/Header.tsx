@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -8,35 +7,33 @@ interface HeaderProps {
 
 export function Header({ onMenuOpen }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 px-6 lg:px-12 py-6">
-      <nav className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 lg:px-16 py-6 lg:py-8">
+      <nav className="flex items-center justify-between max-w-[1600px] mx-auto">
         {/* Logo */}
-        <a href="#" className="font-main text-xl font-medium tracking-tight text-foreground">
-          colega<sup className="text-[10px] ml-0.5">™</sup>
+        <a 
+          href="#" 
+          className="text-lg lg:text-xl font-normal tracking-tight text-foreground hover:opacity-70 transition-opacity duration-300"
+        >
+          colega<sup className="text-[8px] ml-0.5 opacity-60">™</sup>
         </a>
 
-        {/* Right side - Menu button */}
-        <div className="flex items-center gap-6">
-          <button
-            onClick={onMenuOpen}
-            className="flex items-center gap-4 group"
-          >
-            <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors hidden sm:block">
-              Menu
-            </span>
-            <div className="menu-dots group-hover:opacity-70 transition-opacity">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
+        {/* Menu button */}
+        <button
+          onClick={onMenuOpen}
+          className="flex items-center gap-4 group"
+        >
+          <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground group-hover:text-foreground transition-colors duration-300 hidden sm:block">
+            Menu
+          </span>
+          <div className="grid grid-cols-3 gap-[3px] group-hover:gap-[4px] transition-all duration-300">
+            {[...Array(9)].map((_, i) => (
+              <span 
+                key={i} 
+                className="w-[3px] h-[3px] rounded-full bg-foreground group-hover:bg-primary transition-colors duration-300"
+              />
+            ))}
+          </div>
+        </button>
       </nav>
     </header>
   );
@@ -62,28 +59,35 @@ export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="fullscreen-menu"
+          transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+          className="fixed inset-0 bg-background z-50 flex items-center justify-center"
         >
           {/* Close button */}
-          <button
+          <motion.button
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             onClick={onClose}
-            className="absolute top-6 right-6 lg:right-12 p-2 text-foreground hover:text-primary transition-colors"
+            className="absolute top-6 lg:top-8 right-4 sm:right-8 lg:right-16 p-2 text-foreground hover:text-primary transition-colors duration-300"
           >
-            <X size={28} />
-          </button>
+            <X size={24} strokeWidth={1.5} />
+          </motion.button>
 
           {/* Menu items */}
-          <nav className="flex flex-col items-center gap-4">
+          <nav className="flex flex-col items-center gap-2 lg:gap-4">
             {menuItems.map((item, index) => (
               <motion.a
                 key={item.name}
                 href={item.href}
                 onClick={onClose}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
-                className="font-main text-5xl md:text-7xl lg:text-8xl font-light text-foreground hover:text-primary transition-colors"
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.1 + index * 0.08,
+                  ease: [0.32, 0.72, 0, 1]
+                }}
+                className="text-5xl sm:text-6xl lg:text-8xl font-light text-foreground hover:text-primary transition-colors duration-300 tracking-tight"
               >
                 {item.name}
               </motion.a>
@@ -92,19 +96,19 @@ export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
 
           {/* Footer info */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="absolute bottom-8 left-6 lg:left-12 right-6 lg:right-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="absolute bottom-8 left-4 sm:left-8 lg:left-16 right-4 sm:right-8 lg:right-16 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6"
           >
-            <div className="text-muted-foreground text-sm">
-              <p>hello@colega.studio</p>
-              <p>+1 234 567 890</p>
+            <div className="text-muted-foreground text-xs tracking-wide space-y-1">
+              <p className="hover:text-foreground transition-colors cursor-pointer">hello@colega.studio</p>
+              <p className="hover:text-foreground transition-colors cursor-pointer">+1 234 567 890</p>
             </div>
-            <div className="flex gap-6 text-muted-foreground text-sm">
-              <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
-              <a href="#" className="hover:text-foreground transition-colors">Behance</a>
-              <a href="#" className="hover:text-foreground transition-colors">Dribbble</a>
+            <div className="flex gap-6 text-muted-foreground text-xs tracking-wide">
+              <a href="#" className="hover:text-foreground transition-colors duration-300">Instagram</a>
+              <a href="#" className="hover:text-foreground transition-colors duration-300">Behance</a>
+              <a href="#" className="hover:text-foreground transition-colors duration-300">Dribbble</a>
             </div>
           </motion.div>
         </motion.div>
