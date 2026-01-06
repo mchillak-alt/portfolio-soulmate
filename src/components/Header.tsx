@@ -47,6 +47,7 @@ interface FullscreenMenuProps {
 const menuItems = [
   { name: "Home", href: "#" },
   { name: "Portfolio", href: "#portfolio" },
+  { name: "Experience", href: "#experience" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
