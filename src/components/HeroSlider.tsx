@@ -123,26 +123,30 @@ export function HeroSlider() {
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                 
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
-                  <motion.h2
-                    key={`title-${currentIndex}`}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.15, ease: [0.32, 0.72, 0, 1] }}
-                    className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight text-foreground"
-                  >
-                    {projects[currentIndex].title}
-                  </motion.h2>
-                  <motion.p
-                    key={`cat-${currentIndex}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.25, ease: [0.32, 0.72, 0, 1] }}
-                    className="text-muted-foreground text-sm lg:text-base mt-3 tracking-wide"
-                  >
-                    {projects[currentIndex].category}
-                  </motion.p>
+                {/* Content - Title slides from left, category from right */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12 overflow-hidden">
+                  <div className="overflow-hidden">
+                    <motion.h2
+                      key={`title-${currentIndex}`}
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.7, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
+                      className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight text-foreground"
+                    >
+                      {projects[currentIndex].title}
+                    </motion.h2>
+                  </div>
+                  <div className="overflow-hidden">
+                    <motion.p
+                      key={`cat-${currentIndex}`}
+                      initial={{ x: 100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.7, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
+                      className="text-muted-foreground text-sm lg:text-base mt-3 tracking-wide"
+                    >
+                      {projects[currentIndex].category}
+                    </motion.p>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
