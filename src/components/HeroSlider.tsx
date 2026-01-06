@@ -65,19 +65,6 @@ export function HeroSlider() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Marquee Background - More subtle */}
-      <div className="absolute inset-0 flex items-center pointer-events-none overflow-hidden">
-        <div className="marquee opacity-[0.03]">
-          <div className="marquee-content">
-            <span className="text-[20vw] font-light uppercase tracking-tight whitespace-nowrap text-foreground">
-              Loading Colega Website&nbsp;&nbsp;&nbsp;Loading Colega Website&nbsp;&nbsp;&nbsp;
-            </span>
-            <span className="text-[20vw] font-light uppercase tracking-tight whitespace-nowrap text-foreground">
-              Loading Colega Website&nbsp;&nbsp;&nbsp;Loading Colega Website&nbsp;&nbsp;&nbsp;
-            </span>
-          </div>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 w-full h-full flex items-center justify-center px-4 sm:px-8 lg:px-16">
@@ -172,14 +159,24 @@ export function HeroSlider() {
       {/* Navigation Controls */}
       <div className="absolute bottom-8 lg:bottom-12 left-0 right-0 px-4 sm:px-8 lg:px-16 z-20">
         <div className="max-w-[1600px] mx-auto flex items-center justify-between">
-          {/* Prev */}
-          <button 
-            onClick={prevSlide} 
-            className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 group"
-          >
-            <ArrowLeft size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
-            <span className="text-xs uppercase tracking-[0.2em] hidden sm:inline">Prev</span>
-          </button>
+          {/* Prev with progress bar */}
+          <div className="flex items-center gap-6">
+            <div className="w-20 h-px bg-foreground/10 relative overflow-hidden hidden sm:block">
+              <motion.div
+                className="absolute inset-y-0 left-0 bg-primary"
+                initial={{ width: 0 }}
+                animate={{ width: `${((currentIndex + 1) / projects.length) * 100}%` }}
+                transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+              />
+            </div>
+            <button 
+              onClick={prevSlide} 
+              className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 group"
+            >
+              <ArrowLeft size={16} className="transition-transform duration-300 group-hover:-translate-x-1" />
+              <span className="text-xs uppercase tracking-[0.2em] hidden sm:inline">Prev</span>
+            </button>
+          </div>
 
           {/* Dots */}
           <div className="flex items-center gap-3">
@@ -197,33 +194,21 @@ export function HeroSlider() {
             ))}
           </div>
 
-          {/* Next */}
-          <button 
-            onClick={nextSlide} 
-            className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 group"
-          >
-            <span className="text-xs uppercase tracking-[0.2em] hidden sm:inline">Next</span>
-            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+          {/* Next with loaded indicator */}
+          <div className="flex items-center gap-6">
+            <button 
+              onClick={nextSlide} 
+              className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 group"
+            >
+              <span className="text-xs uppercase tracking-[0.2em] hidden sm:inline">Next</span>
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+            <div className="hidden sm:flex items-center gap-2">
+              <span className="text-xs text-muted-foreground tracking-wide">Loaded</span>
+              <span className="text-xs text-foreground font-medium">100%</span>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Progress bar */}
-      <div className="absolute bottom-8 lg:bottom-12 left-4 sm:left-8 lg:left-16 z-20">
-        <div className="w-24 h-px bg-foreground/10 relative overflow-hidden">
-          <motion.div
-            className="absolute inset-y-0 left-0 bg-primary"
-            initial={{ width: 0 }}
-            animate={{ width: `${((currentIndex + 1) / projects.length) * 100}%` }}
-            transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-          />
-        </div>
-      </div>
-
-      {/* Loaded indicator */}
-      <div className="absolute bottom-8 lg:bottom-12 right-4 sm:right-8 lg:right-16 z-20 flex items-center gap-2">
-        <span className="text-xs text-muted-foreground tracking-wide">Loaded</span>
-        <span className="text-xs text-foreground font-medium">100%</span>
       </div>
     </section>
   );
