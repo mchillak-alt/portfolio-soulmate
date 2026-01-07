@@ -1,14 +1,19 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import slide1 from "@/assets/slide-1.jpg";
 import slide2 from "@/assets/slide-2.jpg";
 import slide3 from "@/assets/slide-3.jpg";
 import slide4 from "@/assets/slide-4.jpg";
 import slide5 from "@/assets/slide-5.jpg";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const projects = [
-  { id: 1, title: "Bauman", category: "Web Design", image: slide1 },
+  { id: 1, title: "Baby Driver - Trailer", category: "Film", image: slide1, youtubeId: "zTvJJnoWIPk" },
   { id: 2, title: "Iceland", category: "Photography", image: slide2 },
   { id: 3, title: "Tag Watch", category: "Product Design", image: slide3 },
   { id: 4, title: "Dance Room", category: "Video", image: slide4 },
@@ -19,6 +24,15 @@ export function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
+  const handleSlideClick = (project: typeof projects[0]) => {
+    if (project.youtubeId) {
+      setActiveVideo(project.youtubeId);
+      setVideoOpen(true);
+    }
+  };
 
   const goToSlide = useCallback((index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
@@ -100,6 +114,7 @@ export function HeroSlider() {
                   opacity: { duration: 0.4 },
                 }}
                 className="absolute inset-0 cursor-pointer group"
+                onClick={() => handleSlideClick(projects[currentIndex])}
               >
                 <img
                   src={projects[currentIndex].image}
@@ -210,6 +225,23 @@ export function HeroSlider() {
           </div>
         </div>
       </div>
+      {/* YouTube Video Dialog */}
+      <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+        <DialogContent className="max-w-4xl w-[90vw] p-0 bg-background border-border overflow-hidden">
+          <DialogTitle className="sr-only">Video Player</DialogTitle>
+          <div className="relative aspect-video w-full">
+            {activeVideo && (
+              <iframe
+                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
