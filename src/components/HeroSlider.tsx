@@ -13,7 +13,14 @@ import {
 } from "@/components/ui/dialog";
 
 const projects = [
-  { id: 1, title: "Baby Driver - Trailer", category: "Film", image: slide1, youtubeId: "zTvJJnoWIPk" },
+  { 
+    id: 1, 
+    title: "Baby Driver - Trailer", 
+    category: "Film", 
+    image: slide1, 
+    youtubeId: "zTvJJnoWIPk",
+    description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
+  },
   { id: 2, title: "Iceland", category: "Photography", image: slide2 },
   { id: 3, title: "Tag Watch", category: "Product Design", image: slide3 },
   { id: 4, title: "Dance Room", category: "Video", image: slide4 },
@@ -26,6 +33,7 @@ export function HeroSlider() {
   const [isHovered, setIsHovered] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [slideHovered, setSlideHovered] = useState(false);
 
   const handleSlideClick = (project: typeof projects[0]) => {
     if (project.youtubeId) {
@@ -115,6 +123,8 @@ export function HeroSlider() {
                 }}
                 className="absolute inset-0 cursor-pointer group"
                 onClick={() => handleSlideClick(projects[currentIndex])}
+                onMouseEnter={() => setSlideHovered(true)}
+                onMouseLeave={() => setSlideHovered(false)}
               >
                 <img
                   src={projects[currentIndex].image}
@@ -124,6 +134,23 @@ export function HeroSlider() {
                 
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                
+                {/* Slide-out description panel for projects with descriptions */}
+                {projects[currentIndex].description && (
+                  <motion.div
+                    initial={{ x: "100%" }}
+                    animate={{ x: slideHovered ? 0 : "100%" }}
+                    transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                    className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 lg:w-2/5 bg-background/95 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center border-l border-border/50"
+                  >
+                    <p className="text-foreground/90 text-sm lg:text-base leading-relaxed">
+                      {projects[currentIndex].description}
+                    </p>
+                    <p className="text-primary text-xs mt-4 uppercase tracking-wider">
+                      Click to watch trailer
+                    </p>
+                  </motion.div>
+                )}
                 
                 {/* Content - Title slides from left, category from right */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12 overflow-hidden">
