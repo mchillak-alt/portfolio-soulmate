@@ -21,7 +21,7 @@ const projects = [
     youtubeId: "zTvJJnoWIPk",
     description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
   },
-  { id: 2, title: "Iceland", category: "Photography", image: slide2 },
+  { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 126 },
   { id: 3, title: "Tag Watch", category: "Product Design", image: slide3 },
   { id: 4, title: "Dance Room", category: "Video", image: slide4 },
   { id: 5, title: "Opulence", category: "Branding", image: slide5 },
@@ -32,12 +32,12 @@ export function HeroSlider() {
   const [direction, setDirection] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [activeVideo, setActiveVideo] = useState<{ id: string; start?: number } | null>(null);
   const [slideHovered, setSlideHovered] = useState(false);
 
   const handleSlideClick = (project: typeof projects[0]) => {
     if (project.youtubeId) {
-      setActiveVideo(project.youtubeId);
+      setActiveVideo({ id: project.youtubeId, start: project.youtubeStart });
       setVideoOpen(true);
     }
   };
@@ -259,7 +259,7 @@ export function HeroSlider() {
           <div className="relative aspect-video w-full">
             {activeVideo && (
               <iframe
-                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1${activeVideo.start ? `&start=${activeVideo.start}` : ''}`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
