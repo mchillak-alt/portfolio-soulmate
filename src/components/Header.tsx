@@ -91,7 +91,11 @@ export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
                     delay: 0.1 + index * 0.08,
                     ease: [0.32, 0.72, 0, 1]
                   }}
-                  className="text-5xl sm:text-6xl lg:text-8xl font-light text-foreground hover:text-primary transition-colors duration-300 tracking-tight"
+                  className={`font-light text-foreground hover:text-primary transition-colors duration-300 tracking-tight ${
+                    item.external 
+                      ? "text-xl sm:text-2xl lg:text-3xl mt-6 opacity-70 hover:opacity-100" 
+                      : "text-5xl sm:text-6xl lg:text-8xl"
+                  }`}
                 >
                   {item.name}
                 </motion.a>
