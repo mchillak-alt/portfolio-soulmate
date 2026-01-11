@@ -22,7 +22,7 @@ const projects = [
     description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
   },
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
-  { id: 3, title: "Tag Watch", category: "Product Design", image: slide3 },
+  { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Dance Room", category: "Video", image: slide4 },
   { id: 5, title: "Opulence", category: "Branding", image: slide5 },
 ];
