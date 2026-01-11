@@ -50,6 +50,7 @@ const menuItems = [
   { name: "Credits", href: "#credits" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
+  { name: "MCP Audio Library", href: "https://mischa-chillak.sellfy.store/", external: true },
 ];
 
 export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
@@ -76,23 +77,25 @@ export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
 
           {/* Menu items */}
           <nav className="flex flex-col items-center gap-2 lg:gap-4">
-            {menuItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                onClick={onClose}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: 0.1 + index * 0.08,
-                  ease: [0.32, 0.72, 0, 1]
-                }}
-                className="text-5xl sm:text-6xl lg:text-8xl font-light text-foreground hover:text-primary transition-colors duration-300 tracking-tight"
-              >
-                {item.name}
-              </motion.a>
-            ))}
+              {menuItems.map((item, index) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  onClick={item.external ? undefined : onClose}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.1 + index * 0.08,
+                    ease: [0.32, 0.72, 0, 1]
+                  }}
+                  className="text-5xl sm:text-6xl lg:text-8xl font-light text-foreground hover:text-primary transition-colors duration-300 tracking-tight"
+                >
+                  {item.name}
+                </motion.a>
+              ))}
           </nav>
 
           {/* Footer info */}
