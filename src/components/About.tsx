@@ -16,15 +16,19 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary text-sm uppercase tracking-widest font-medium mb-6 block">
-              About Us
+              About
             </span>
             <h2 className="font-main text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
-              We are a creative studio based in New York
+              Musical Chameleon & Master of Sonic Storytelling
             </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Hailing from Toronto's vibrant hip-hop and R&B circles, Mischa Chillak honed his production skills before making the leap to Los Angeles to explore film scoring. It was in the dynamic world of sync music where his talent truly blossomed.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              With an innate ability to craft sounds that thrill and uplift, Mischa's music seamlessly heightens the visceral and emotional journeys of visual media. His compositions have brought kinetic energy to blockbusters like <em>Spider-Man: Across the Spider-Verse</em>, <em>Road House</em>, and <em>Baby Driver</em>, while his immersive scores have amplified titles such as <em>Deathloop</em>, <em>UFC</em>, and <em>FC'24</em>.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Colega is a creative studio that specializes in crafting unique digital
-              experiences. We combine innovative design with cutting-edge technology
-              to deliver exceptional results for our clients worldwide.
+              A genre-defying artist, Mischa's evocative compositions have elevated campaigns for Fortune 500 brands like Apple, Microsoft, and Samsung, as well as the NBA, NHL, MLB, and NFL—injecting emotion and electricity into their media.
             </p>
             <a
               href="#contact"
