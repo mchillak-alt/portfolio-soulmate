@@ -48,9 +48,7 @@ export function About() {
           >
             {[
               { number: "150+", label: "Projects Completed" },
-              { number: "45+", label: "Happy Clients" },
-              { number: "12", label: "Awards Won" },
-              { number: "8", label: "Years Experience" },
+              { number: "23", label: "Years Experience" },
             ].map((stat, index) => (
               <div
                 key={stat.label}
