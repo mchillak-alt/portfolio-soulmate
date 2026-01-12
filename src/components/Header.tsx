@@ -14,7 +14,7 @@ export function Header({ onMenuOpen }: HeaderProps) {
           href="#" 
           className="text-lg lg:text-xl font-normal tracking-tight text-foreground hover:opacity-70 transition-opacity duration-300"
         >
-          Mischa Chillak
+          mischa chillak
         </a>
 
         {/* Menu button */}
