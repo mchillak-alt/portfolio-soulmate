@@ -12,7 +12,7 @@ export function Header({ onMenuOpen }: HeaderProps) {
         {/* Logo */}
         <a 
           href="#" 
-          className="text-lg lg:text-xl font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity duration-300"
+          className="text-lg lg:text-xl font-semibold tracking-wide text-foreground hover:opacity-70 transition-opacity duration-300"
         >
           mischa chillak
         </a>
