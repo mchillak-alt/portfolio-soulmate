@@ -3,9 +3,6 @@ import { useRef } from "react";
 
 const socialLinks = [
   { name: "Instagram", href: "#" },
-  { name: "Behance", href: "#" },
-  { name: "Dribbble", href: "#" },
-  { name: "Twitter", href: "#" },
 ];
 
 export function Footer() {
@@ -22,8 +19,8 @@ export function Footer() {
           className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
         >
           {/* Logo */}
-          <a href="#" className="font-main text-2xl font-medium tracking-tight text-foreground">
-            colega<sup className="text-[10px] ml-0.5">™</sup>
+          <a href="#" className="text-lg lg:text-xl font-normal tracking-wide text-foreground hover:opacity-70 transition-opacity duration-300">
+            mischa chillak
           </a>
 
           {/* Social links */}
@@ -41,7 +38,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            © 2024 Colega. All rights reserved.
+            ©2024 mischa chillak. All rights reserved.
           </p>
         </motion.div>
       </div>
