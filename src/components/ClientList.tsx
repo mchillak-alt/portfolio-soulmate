@@ -188,6 +188,16 @@ const credits = [
   { id: 183, spot: "Investigation Discovery Promo (In Pursuit with John Walsh)", song: "Nowhere To Run (Cover)", artist: "BOGA", year: "2018" },
   { id: 184, spot: "MSNBC Midterm Election Promos", song: "Hold On, I'm Coming (Cover)", artist: "Book ft. Ndidi O", year: "2018" },
   { id: 185, spot: "World's Best", song: "Ready Or Not (Cover)", artist: "Book ft. Esthero", year: "2019" },
+  // IMDb Film/TV Credits (Composer)
+  { id: 186, spot: "Bridgit Mendler: Library (Music Video)", song: "", artist: "Composer", year: "2016" },
+  { id: 187, spot: "October Gale (Film)", song: "", artist: "Composer", year: "2014" },
+  { id: 188, spot: "Home Again (Film)", song: "", artist: "Composer", year: "2012" },
+  { id: 189, spot: "Sounds Like a Revolution (Documentary)", song: "", artist: "Composer", year: "2010" },
+  { id: 190, spot: "Dan for Mayor (TV Series)", song: "", artist: "Composer", year: "2010" },
+  { id: 191, spot: "Guns (TV Mini Series)", song: "", artist: "Composer", year: "2009" },
+  { id: 192, spot: "Doomstown (TV Movie)", song: "", artist: "Composer", year: "2006" },
+  { id: 193, spot: "Commentary: On (Short Film)", song: "", artist: "Composer", year: "2004" },
+  { id: 194, spot: "Love, Sex and Eating the Bones (Film)", song: "", artist: "Composer", year: "2003" },
 ];
 
 // Get unique years sorted in descending order
@@ -238,16 +248,6 @@ export function ClientList() {
           transition={{ duration: 0.5 }}
           className="mb-8 flex flex-wrap items-center gap-2"
         >
-          <button
-            onClick={() => setSelectedYear(null)}
-            className={`px-4 py-2 text-xs uppercase tracking-[0.15em] rounded-full transition-all duration-300 ${
-              selectedYear === null
-                ? "bg-primary text-primary-foreground"
-                : "bg-secondary/50 text-muted-foreground hover:bg-secondary"
-            }`}
-          >
-            All
-          </button>
           {visibleYears.map((year) => (
             <button
               key={year}
