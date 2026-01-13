@@ -207,7 +207,7 @@ const getUniqueYears = () => {
 };
 
 export function ClientList() {
-  const [selectedYear, setSelectedYear] = useState<string | null>(null);
+  const [selectedYear, setSelectedYear] = useState<string | null>("2025");
   const [showAllYears, setShowAllYears] = useState(false);
 
   const years = useMemo(() => getUniqueYears(), []);
