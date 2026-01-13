@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header({ onMenuOpen }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 lg:px-16 py-6 lg:py-8">
+    <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 lg:px-16 py-6 lg:py-8 bg-background">
       <nav className="flex items-center justify-between max-w-[1600px] mx-auto">
         {/* Logo */}
         <a 
