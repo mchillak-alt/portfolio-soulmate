@@ -30,13 +30,9 @@ export function Contact() {
             <span className="text-primary text-sm uppercase tracking-widest font-medium mb-6 block">
               Get In Touch
             </span>
-            <h2 className="font-main text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
+            <h2 className="font-main text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-10">
               Let's work together
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Have a project in mind? We'd love to hear about it. Drop us a
-              line and let's create something extraordinary together.
-            </p>
 
             <div className="space-y-6">
               <div>
@@ -44,28 +40,17 @@ export function Contact() {
                   Email
                 </span>
                 <a
-                  href="mailto:hello@colega.studio"
+                  href="mailto:info@mischachillak.com"
                   className="text-foreground text-lg hover:text-primary transition-colors"
                 >
-                  hello@colega.studio
-                </a>
-              </div>
-              <div>
-                <span className="text-muted-foreground text-sm uppercase tracking-widest block mb-2">
-                  Phone
-                </span>
-                <a
-                  href="tel:+1234567890"
-                  className="text-foreground text-lg hover:text-primary transition-colors"
-                >
-                  +1 (234) 567-890
+                  info@mischachillak.com
                 </a>
               </div>
               <div>
                 <span className="text-muted-foreground text-sm uppercase tracking-widest block mb-2">
                   Location
                 </span>
-                <span className="text-foreground text-lg">New York, NY 10001</span>
+                <span className="text-foreground text-lg">Los Angeles, CA</span>
               </div>
             </div>
           </motion.div>
