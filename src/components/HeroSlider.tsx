@@ -23,7 +23,7 @@ const projects = [
   },
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
   { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
-  { id: 4, title: "Dance Room", category: "Video", image: slide4 },
+  { id: 4, title: "Dance Room", category: "Video", image: slide4, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "Opulence", category: "Branding", image: slide5 },
 ];
 
