@@ -19,16 +19,19 @@ export function About() {
               About
             </span>
             <h2 className="font-main text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
-              Musical Chameleon & Master of Sonic Storytelling
+              Mischa Chillak
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Hailing from Toronto's vibrant hip-hop and R&B circles, Mischa Chillak honed his production skills before making the leap to Los Angeles to explore film scoring. It was in the dynamic world of sync music where his talent truly blossomed.
+              Mischa Chillak is a Los Angeles–based producer and composer whose work lives at the intersection of emotion, rhythm, and visual storytelling.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              With an innate ability to craft sounds that thrill and uplift, Mischa's music seamlessly heightens the visceral and emotional journeys of visual media. His compositions have brought kinetic energy to blockbusters like <em>Spider-Man: Across the Spider-Verse</em>, <em>Road House</em>, and <em>Baby Driver</em>, while his immersive scores have amplified titles such as <em>Deathloop</em>, <em>UFC</em>, and <em>FC'24</em>.
+              Raised in Toronto's hip-hop and R&B scene, Mischa developed an instinct for feel and groove long before turning toward film and sync, where those same instincts found a natural home. His music is shaped less by genre and more by emotional intent—built to move with picture, enhance story, and leave space for what matters on screen.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Mischa's compositions have appeared across film, games, sports, and global campaigns, bringing energy and atmosphere to projects ranging from <em>Spider-Man: Across the Spider-Verse</em> and <em>Baby Driver</em> to major brand and sports collaborations. Whether kinetic or restrained, his work is guided by a sensitivity to tone and context, allowing the music to support the moment without overpowering it.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              A genre-defying artist, Mischa's evocative compositions have elevated campaigns for Fortune 500 brands like Apple, Microsoft, and Samsung, as well as the NBA, NHL, MLB, and NFL—injecting emotion and electricity into their media.
+              At its core, Mischa's approach is about connection—creating music that feels alive, grounded, and emotionally honest, while fitting naturally into the world it inhabits.
             </p>
             <a
               href="#contact"
