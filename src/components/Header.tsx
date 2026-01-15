@@ -12,9 +12,9 @@ export function Header({ onMenuOpen }: HeaderProps) {
         {/* Logo */}
         <a 
           href="#" 
-          className="text-lg lg:text-xl tracking-wide text-foreground hover:opacity-70 transition-opacity duration-300"
+          className="text-sm lg:text-base tracking-wide text-foreground hover:opacity-70 transition-opacity duration-300"
         >
-          <span className="font-bold">mischa chillak</span> - composer. producer. sound designer
+          <span className="font-bold">mischa chillak</span> - composer / producer / sound designer
         </a>
 
         {/* Menu button */}
