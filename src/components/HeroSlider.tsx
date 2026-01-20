@@ -24,7 +24,7 @@ const projects = [
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
   { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: slide4, youtubeId: "ARUjuqwA-98" },
-  { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: slide5 },
+  { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: slide5, youtubeId: "5XpHOkrFYbA" },
 ];
 
 export function HeroSlider() {
