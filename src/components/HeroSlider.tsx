@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
-import slide1 from "@/assets/slide-1.jpg";
+import babyDriverSlide from "@/assets/baby-driver-slide.png";
 import slide2 from "@/assets/slide-2.jpg";
 import slide3 from "@/assets/slide-3.jpg";
 import murdaughSlide from "@/assets/murdaugh-slide.png";
@@ -17,7 +17,7 @@ const projects = [
     id: 1, 
     title: "Baby Driver - Trailer", 
     category: "Film", 
-    image: slide1, 
+    image: babyDriverSlide, 
     youtubeId: "zTvJJnoWIPk",
     description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
   },
