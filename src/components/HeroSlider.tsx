@@ -5,7 +5,7 @@ import babyDriverSlide from "@/assets/baby-driver-slide.png";
 import slide2 from "@/assets/slide-2.jpg";
 import slide3 from "@/assets/slide-3.jpg";
 import murdaughSlide from "@/assets/murdaugh-slide.png";
-import slide5 from "@/assets/slide-5.jpg";
+import blackeningSlide from "@/assets/blackening-slide.png";
 import {
   Dialog,
   DialogContent,
@@ -24,7 +24,7 @@ const projects = [
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
   { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
-  { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: slide5, youtubeId: "5XpHOkrFYbA" },
+  { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
 ];
 
 export function HeroSlider() {
