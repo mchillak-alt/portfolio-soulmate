@@ -160,7 +160,7 @@ export function HeroSlider() {
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.7, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
-                      className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight text-foreground"
+                      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase tracking-[0.15em] text-foreground"
                     >
                       {projects[currentIndex].title}
                     </motion.h2>
@@ -171,7 +171,7 @@ export function HeroSlider() {
                       initial={{ x: 100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.7, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
-                      className="text-muted-foreground text-sm lg:text-base mt-3 tracking-wide"
+                      className="text-muted-foreground text-xs lg:text-sm mt-4 uppercase tracking-[0.3em]"
                     >
                       {projects[currentIndex].category}
                     </motion.p>
