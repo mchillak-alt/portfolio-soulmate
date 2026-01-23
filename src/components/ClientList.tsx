@@ -236,7 +236,7 @@ export function ClientList() {
             Credits
           </h2>
           <p className="text-muted-foreground mt-4">
-            {credits.length} placements across film, TV, commercials, and video games
+            Film, TV, commercials, and video games
           </p>
         </motion.div>
 
