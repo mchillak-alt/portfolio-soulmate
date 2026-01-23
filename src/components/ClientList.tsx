@@ -233,7 +233,7 @@ export function ClientList() {
             Credits
           </span>
           <h2 className="text-4xl lg:text-5xl font-light tracking-tight text-foreground mt-4">
-            Selected Work
+            Credits
           </h2>
           <p className="text-muted-foreground mt-4">
             {credits.length} placements across film, TV, commercials, and video games
