@@ -15,8 +15,8 @@ import {
 const projects = [
   { 
     id: 1, 
-    title: "Baby Driver - Trailer", 
-    category: "Film", 
+    title: "Baby Driver", 
+    category: "Film Trailer and OST", 
     image: babyDriverSlide, 
     youtubeId: "zTvJJnoWIPk",
     description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
