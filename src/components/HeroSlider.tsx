@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import babyDriverSlide from "@/assets/baby-driver-slide.png";
-import slide2 from "@/assets/slide-2.jpg";
+import spiderverseSlide from "@/assets/spiderverse-slide.png";
 import slide3 from "@/assets/slide-3.jpg";
 import murdaughSlide from "@/assets/murdaugh-slide.png";
 import blackeningSlide from "@/assets/blackening-slide.png";
@@ -21,7 +21,7 @@ const projects = [
     youtubeId: "zTvJJnoWIPk",
     description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
   },
-  { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: slide2, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
+  { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: spiderverseSlide, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
   { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
