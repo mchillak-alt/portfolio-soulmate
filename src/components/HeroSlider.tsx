@@ -18,8 +18,7 @@ const projects = [
     title: "Baby Driver", 
     category: "Film Trailer and OST", 
     image: babyDriverSlide, 
-    youtubeId: "zTvJJnoWIPk",
-    description: "\"Nowhere To Run\" was a cover featuring vocalist Ndidi Onukwulu which Mischa produced specifically for trailers. Baby Driver's trailers won several honors, notably the Golden Trailer Award for Best Action Trailer, and received recognition at the Golden Trailer Awards. This was also one of the rare occasions where the music used in the Trailer was so popular that it ended up being added to the Baby Driver original soundtrack."
+    youtubeId: "zTvJJnoWIPk"
   },
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: spiderverseSlide, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
   { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
@@ -136,7 +135,7 @@ export function HeroSlider() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                 
                 {/* Slide-out description panel for projects with descriptions */}
-                {projects[currentIndex].description && (
+                {'description' in projects[currentIndex] && projects[currentIndex].description && (
                   <motion.div
                     initial={{ x: "100%" }}
                     animate={{ x: slideHovered ? 0 : "100%" }}
@@ -144,7 +143,7 @@ export function HeroSlider() {
                     className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 lg:w-2/5 bg-background/95 backdrop-blur-sm p-6 lg:p-8 flex flex-col justify-center border-l border-border/50"
                   >
                     <p className="text-foreground/90 text-sm lg:text-base leading-relaxed">
-                      {projects[currentIndex].description}
+                      {(projects[currentIndex] as { description?: string }).description}
                     </p>
                     <p className="text-primary text-xs mt-4 uppercase tracking-wider">
                       Click to watch trailer
