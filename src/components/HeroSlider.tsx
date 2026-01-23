@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import babyDriverSlide from "@/assets/baby-driver-slide.png";
 import spiderverseSlide from "@/assets/spiderverse-slide.png";
-import slide3 from "@/assets/slide-3.jpg";
+import deathloopSlide from "@/assets/deathloop-slide.png";
 import murdaughSlide from "@/assets/murdaugh-slide.png";
 import blackeningSlide from "@/assets/blackening-slide.png";
 import {
@@ -21,7 +21,7 @@ const projects = [
     youtubeId: "zTvJJnoWIPk"
   },
   { id: 2, title: "Spiderverse Across The Universe - OST", category: "Film", image: spiderverseSlide, youtubeId: "jWSmXLAeFFw", youtubeStart: 60 },
-  { id: 3, title: "Death Loop", category: "Video Game", image: slide3, youtubeId: "RhYd69gscl8" },
+  { id: 3, title: "Death Loop", category: "Video Game", image: deathloopSlide, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
 ];
