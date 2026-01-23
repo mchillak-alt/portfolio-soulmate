@@ -19,8 +19,8 @@ export function Footer() {
           className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
         >
           {/* Logo */}
-          <a href="#" className="text-lg lg:text-xl font-normal tracking-wide text-foreground hover:opacity-70 transition-opacity duration-300">
-            mischa chillak
+          <a href="#" className="text-xs lg:text-sm font-semibold uppercase tracking-[0.25em] text-foreground hover:opacity-70 transition-opacity duration-300">
+            Mischa Chillak
           </a>
 
           {/* Social links */}
@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            ©2024 mischa chillak. All rights reserved.
+            ©2024 Mischa Chillak. All rights reserved.
           </p>
         </motion.div>
       </div>
