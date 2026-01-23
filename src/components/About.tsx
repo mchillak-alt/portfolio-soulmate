@@ -50,7 +50,7 @@ export function About() {
             className="grid grid-cols-2 gap-8"
           >
             {[
-              { number: "150+", label: "Projects Completed" },
+              { number: "200+", label: "Projects" },
               { number: "23", label: "Years Experience" },
             ].map((stat, index) => (
               <div
