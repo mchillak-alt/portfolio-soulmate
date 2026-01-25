@@ -163,9 +163,9 @@ export function HeroSlider() {
                       key={`bg-${currentIndex}`}
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.9, delay: 0.05, ease: [0.32, 0.72, 0, 1] }}
+                      transition={{ duration: 1.1, delay: 0.05, ease: [0.32, 0.72, 0, 1] }}
                       className="absolute inset-0 bg-background/90 origin-left"
-                      style={{ left: '-1rem', right: '-1.5rem', top: '-0.25rem', bottom: '-0.25rem' }}
+                      style={{ left: '-8rem', right: '-1.5rem', top: '-0.25rem', bottom: '-0.25rem' }}
                     />
                     <motion.h2
                       key={`title-${currentIndex}`}
