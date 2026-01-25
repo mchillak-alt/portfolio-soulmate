@@ -157,13 +157,22 @@ export function HeroSlider() {
                 
                 {/* Content - Title slides from left, category from right */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12 overflow-hidden">
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden relative">
+                    {/* Black rectangle background - animates slower */}
+                    <motion.div
+                      key={`bg-${currentIndex}`}
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.9, delay: 0.05, ease: [0.32, 0.72, 0, 1] }}
+                      className="absolute inset-0 bg-background/90 -ml-4 -mr-4 pl-4 pr-4"
+                      style={{ width: 'fit-content', paddingRight: '1.5rem', paddingLeft: '1rem' }}
+                    />
                     <motion.h2
                       key={`title-${currentIndex}`}
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.7, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
-                      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase tracking-[0.15em] text-foreground"
+                      className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase tracking-[0.15em] text-foreground relative"
                     >
                       {projects[currentIndex].title}
                     </motion.h2>
