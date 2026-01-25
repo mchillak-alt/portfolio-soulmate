@@ -188,6 +188,10 @@ const credits = [
   { id: 183, spot: "Investigation Discovery Promo (In Pursuit with John Walsh)", song: "Nowhere To Run (Cover)", artist: "BOGA", year: "2018" },
   { id: 184, spot: "MSNBC Midterm Election Promos", song: "Hold On, I'm Coming (Cover)", artist: "Book ft. Ndidi O", year: "2018" },
   { id: 185, spot: "World's Best", song: "Ready Or Not (Cover)", artist: "Book ft. Esthero", year: "2019" },
+  // Artist Credits
+  { id: 195, spot: "Nobody Like You - Interlude (Freddie Gibbs)", song: "", artist: "Composer, Lyricist", year: "2024" },
+  { id: 196, spot: "pa$$ the time (Bronze, BBRC)", song: "", artist: "Composer, Producer", year: "2021" },
+  { id: 197, spot: "Atlantis (Bridgit Mendler)", song: "", artist: "Co-Writer, Composer", year: "2016" },
   // IMDb Film/TV Credits (Composer)
   { id: 186, spot: "Bridgit Mendler: Library (Music Video)", song: "", artist: "Composer", year: "2016" },
   { id: 187, spot: "October Gale (Film)", song: "", artist: "Composer", year: "2014" },
