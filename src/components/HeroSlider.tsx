@@ -25,7 +25,7 @@ const projects = [
   { id: 3, title: "Death Loop", category: "Video Game", image: deathloopSlide, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
-  { id: 6, title: "Apple Iphone Launch", category: "Commercial", image: appleIphoneSlide, youtubeId: "-rAeqN-Q7x4", youtubeStart: 2903 },
+  { id: 6, title: "Apple Iphone Launch", category: "Commercial", image: appleIphoneSlide, youtubeId: "-rAeqN-Q7x4", youtubeStart: 2908 },
 ];
 
 export function HeroSlider() {
