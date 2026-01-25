@@ -6,6 +6,7 @@ import spiderverseSlide from "@/assets/spiderverse-slide.png";
 import deathloopSlide from "@/assets/deathloop-slide.png";
 import murdaughSlide from "@/assets/murdaugh-slide.png";
 import blackeningSlide from "@/assets/blackening-slide.png";
+import appleIphoneSlide from "@/assets/apple-iphone-slide.png";
 import {
   Dialog,
   DialogContent,
@@ -24,6 +25,7 @@ const projects = [
   { id: 3, title: "Death Loop", category: "Video Game", image: deathloopSlide, youtubeId: "RhYd69gscl8" },
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "The Blackening - Opening Theme", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
+  { id: 6, title: "Apple Iphone Launch", category: "Commercial", image: appleIphoneSlide, youtubeId: "-rAeqN-Q7x4", youtubeStart: 2903 },
 ];
 
 export function HeroSlider() {
