@@ -40,7 +40,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            ©2024 Mischa Chillak. All rights reserved.
+            ©2025 Mischa Chillak. All rights reserved.
           </p>
         </motion.div>
       </div>
