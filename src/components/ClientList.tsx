@@ -190,6 +190,9 @@ const credits = [
   { id: 185, spot: "World's Best", song: "Ready Or Not (Cover)", artist: "Book ft. Esthero", year: "2019" },
   // Artist Credits
   { id: 195, spot: "Nobody Like You - Interlude (Freddie Gibbs)", song: "", artist: "Composer, Lyricist", year: "2024" },
+  { id: 198, spot: "Cosmo Freestyle (Freddie Gibbs)", song: "", artist: "Producer", year: "2024" },
+  { id: 199, spot: "On The Set (Freddie Gibbs)", song: "", artist: "Producer", year: "2024" },
+  { id: 200, spot: "Sunset For The Dead (Tommy Newport)", song: "", artist: "Composer, Lyricist", year: "2023" },
   { id: 196, spot: "pa$$ the time (Bronze, BBRC)", song: "", artist: "Composer, Producer", year: "2021" },
   { id: 197, spot: "Atlantis (Bridgit Mendler)", song: "", artist: "Co-Writer, Composer", year: "2016" },
   // IMDb Film/TV Credits (Composer)
