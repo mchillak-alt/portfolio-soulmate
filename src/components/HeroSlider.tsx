@@ -27,7 +27,7 @@ const projects = [
   { id: 4, title: "Murdaugh: Death In The Family", category: "Film Trailer", image: murdaughSlide, youtubeId: "ARUjuqwA-98" },
   { id: 5, title: "The Blackening", category: "Film", image: blackeningSlide, youtubeId: "5XpHOkrFYbA" },
   { id: 6, title: "Apple Iphone Launch", category: "Commercial", image: appleIphoneSlide, youtubeId: "-rAeqN-Q7x4", youtubeStart: 2908 },
-  { id: 7, title: "Microsoft Surface Ad", category: "Commercial", image: microsoftSurfaceSlide, youtubeId: "TaAlizedT7o" },
+  { id: 7, title: "Microsoft Surface", category: "Commercial", image: microsoftSurfaceSlide, youtubeId: "TaAlizedT7o" },
 ];
 
 export function HeroSlider() {
