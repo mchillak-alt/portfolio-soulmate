@@ -97,7 +97,7 @@ export function HeroSlider() {
           
           {/* Previous slide preview */}
           <motion.div 
-            className="hidden lg:block w-20 xl:w-28 aspect-[3/4] rounded-lg overflow-hidden cursor-pointer flex-shrink-0"
+            className="hidden lg:block w-20 xl:w-28 aspect-[3/4] rounded-lg overflow-hidden cursor-pointer flex-shrink-0 group"
             onClick={prevSlide}
             whileHover={{ scale: 1.05, opacity: 0.6 }}
             initial={{ opacity: 0.3 }}
@@ -106,7 +106,7 @@ export function HeroSlider() {
             <img
               src={projects[(currentIndex - 1 + projects.length) % projects.length].image}
               alt="Previous"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
           </motion.div>
 
@@ -186,7 +186,7 @@ export function HeroSlider() {
 
           {/* Next slide preview */}
           <motion.div 
-            className="hidden lg:block w-20 xl:w-28 aspect-[3/4] rounded-lg overflow-hidden cursor-pointer flex-shrink-0"
+            className="hidden lg:block w-20 xl:w-28 aspect-[3/4] rounded-lg overflow-hidden cursor-pointer flex-shrink-0 group"
             onClick={nextSlide}
             whileHover={{ scale: 1.05, opacity: 0.6 }}
             initial={{ opacity: 0.3 }}
@@ -195,7 +195,7 @@ export function HeroSlider() {
             <img
               src={projects[(currentIndex + 1) % projects.length].image}
               alt="Next"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
           </motion.div>
         </div>
