@@ -1,8 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Instagram } from "lucide-react";
 
 const socialLinks = [
-  { name: "Instagram", href: "#" },
+  { name: "Instagram", href: "#", icon: Instagram },
 ];
 
 export function Footer() {
@@ -29,9 +30,10 @@ export function Footer() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground text-sm hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label={link.name}
               >
-                {link.name}
+                <link.icon size={20} />
               </a>
             ))}
           </div>
