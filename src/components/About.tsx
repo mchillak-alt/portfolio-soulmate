@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import mischaStudioPiano from "@/assets/mischa-studio-piano.jpg";
 
 export function About() {
   const ref = useRef(null);
@@ -42,27 +43,40 @@ export function About() {
             </a>
           </motion.div>
 
-          {/* Right Column - Stats */}
+          {/* Right Column - Photo & Stats */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-8"
+            className="flex flex-col gap-8"
           >
-            {[
-              { number: "200+", label: "Projects" },
-              { number: "23", label: "Years Experience" },
-            ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className="p-6 bg-secondary/50 rounded-xl border border-border/50 hover:border-primary/50 transition-colors"
-              >
-                <span className="font-main text-4xl md:text-5xl font-medium text-primary block mb-2">
-                  {stat.number}
-                </span>
-                <span className="text-muted-foreground text-sm">{stat.label}</span>
-              </div>
-            ))}
+            {/* Photo */}
+            <div className="relative overflow-hidden rounded-xl">
+              <img
+                src={mischaStudioPiano}
+                alt="Mischa Chillak at the piano in the studio"
+                className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
+            </div>
+            
+            {/* Stats below photo */}
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { number: "200+", label: "Projects" },
+                { number: "23", label: "Years Experience" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="p-5 bg-secondary/50 rounded-xl border border-border/50 hover:border-primary/50 transition-colors"
+                >
+                  <span className="font-main text-3xl md:text-4xl font-medium text-primary block mb-1">
+                    {stat.number}
+                  </span>
+                  <span className="text-muted-foreground text-sm">{stat.label}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
