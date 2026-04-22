@@ -102,24 +102,6 @@ export function FullscreenMenu({ isOpen, onClose }: FullscreenMenuProps) {
                 </motion.a>
               ))}
           </nav>
-
-          {/* Footer info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="absolute bottom-8 left-4 sm:left-8 lg:left-16 right-4 sm:right-8 lg:right-16 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6"
-          >
-            <div className="text-muted-foreground text-xs tracking-wide space-y-1">
-              <p className="hover:text-foreground transition-colors cursor-pointer">hello@colega.studio</p>
-              <p className="hover:text-foreground transition-colors cursor-pointer">+1 234 567 890</p>
-            </div>
-            <div className="flex gap-6 text-muted-foreground text-xs tracking-wide">
-              <a href="#" className="hover:text-foreground transition-colors duration-300">Instagram</a>
-              <a href="#" className="hover:text-foreground transition-colors duration-300">Behance</a>
-              <a href="#" className="hover:text-foreground transition-colors duration-300">Dribbble</a>
-            </div>
-          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
